@@ -21,18 +21,16 @@
   history.replaceState(null, '', location.pathname + location.search);
 })();
 </script>
-<meta name="google-adsense-account" content="ca-pub-7172777388515296">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7172777388515296" crossorigin="anonymous"></script>
 <meta name="description" content="Draw the same theme in pixel art before time runs out, then everyone votes 1 to 10. Play bots or real players, free in your browser.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Pixel Battle">
 <meta property="og:description" content="Draw the same theme in pixel art before time runs out, then everyone votes 1 to 10. Play bots or real players, free in your browser.">
-<meta property="og:url" content="https://pixelbattlegame.com/">
-<meta property="og:image" content="https://pixelbattlegame.com/og.png">
+<meta property="og:url" content="https://pixelartbattle.github.io/">
+<meta property="og:image" content="https://pixelartbattle.github.io/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://pixelbattlegame.com/og.png">
+<meta name="twitter:image" content="https://pixelartbattle.github.io/og.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Pixelify+Sans:wght@400;600;700&display=swap">
@@ -434,10 +432,6 @@ h2{font-family:var(--display);font-weight:400;font-size:20px;margin:0;line-heigh
 html{-webkit-text-size-adjust:100%}
 body{margin:0}
 .foot a{color:var(--s);text-decoration:underline;text-underline-offset:3px}
-.adslot{margin:14px auto 0;width:100%;max-width:728px;min-height:104px;text-align:center;overflow:hidden}
-.adslot.above{margin:4px auto 14px}
-@media (min-width:1100px) and (min-height:560px){#adMenu{position:absolute;right:clamp(24px,6vw,120px);top:50%;transform:translateY(-50%);width:316px;box-sizing:border-box;margin:0;z-index:2;background:rgba(26,28,44,.88);padding:8px;box-shadow:4px 4px 0 rgba(0,0,0,.5)}}
-.adslot::before{content:"ADVERTISEMENT";display:block;font:400 8px/1 var(--display);letter-spacing:.1em;color:var(--s);opacity:.6;margin-bottom:6px}
 </style>
 </head>
 <body>
@@ -472,7 +466,6 @@ body{margin:0}
       <button class="mode m-teal" id="bModes"><b>OTHER GAMEMODES</b><span>Browse more ways to play.</span></button>
       <button class="mode m-gold" id="bHall"><b>HALL OF ARTWORKS</b><span id="hallCount">Every drawing you save.</span></button>
     </div>
-    <div class="adslot" id="adMenu" hidden></div>
     <div class="tips">
       <div><b>1 THEME</b>A random theme spins up.</div>
       <div><b>2 DRAW</b>Pixel art on a 32×32 canvas.</div>
@@ -648,7 +641,6 @@ body{margin:0}
       <button class="btn pink" id="jShare" hidden>SHARE</button>
       <button class="btn" id="jRate">RATE MY ART</button>
     </div>
-    <div class="adslot" id="adJ" hidden></div>
   </div>
 </section>
 
@@ -666,7 +658,6 @@ body{margin:0}
       <div class="note" id="rRkNote" style="margin-top:6px"></div>
     </div>
     <div id="criticBox"></div>
-    <div class="adslot above" id="adRes" hidden></div>
     <div class="row end" id="rBtns" hidden>
       <button class="btn ghost" id="rCritic" hidden>AI CRITIC</button>
       <button class="btn ghost" id="rSave" hidden>SAVE TO GALLERY</button>
@@ -682,7 +673,6 @@ body{margin:0}
     <header class="topbar"><div><div class="lbl" id="xrLbl">Results</div><h2 id="xrTitle">RESULTS</h2></div></header>
     <div id="xrBody"></div>
     <div class="opt" id="xrXp"><div class="lvl">LV <span id="xrLvl">1</span><div class="xpbar"><i id="xrXpBar"></i></div><span id="xrGain" style="color:var(--l)"></span></div></div>
-    <div class="adslot above" id="adX" hidden></div>
     <div class="row end" id="xrBtns"><button class="btn ghost" id="xrMenu">MENU</button><button class="btn ghost" id="xrSave" hidden>SAVE TO GALLERY</button><button class="btn ghost" id="xrRoom" hidden>BACK TO ROOM</button><button class="btn pink" id="xrFind" hidden>NEW MATCH</button><button class="btn" id="xrAgain" hidden>PLAY AGAIN</button></div>
     <div class="note" id="xrWait" hidden>The host picks what happens next.</div>
   </div>
@@ -4889,31 +4879,6 @@ numWrap(document.body);
 window.__pbx = {isRude, folioAdd, setMix(v){ RECOG_MIX = v; }, setTta(v){ QTTA = v; }, qualityOf, quality1, recognizeMlp, recognizeCnn, nextTheme, noteTheme, myRecent, JP, features, effortOf, themeMatch, get XG(){ return XG; }, XC, get appMode(){ return appMode; }, get MM(){ return MM; }, encAny, decAny, copyScore, copyBot, makeArtQ:makeArt, decGrid, IMP_PAIRS, XINFO, dailyTheme, dayKey, recolor, pick3, ED, encGrid, blankCanvas, judgeA:judge, mulberry, BOT_THEMES:BOT_THEMES};
 window.__pb = {myName, get GS(){ return GS; }, get NET(){ return NET; }, prof, rankDelta, tierOf, get RES(){ return RES; }, makeArt, makeArtHi, artFor, judgeDown, detailBonus, judge, judgeRaw, JP, recognize, artFeatures, botVerdict, encGrid, decGrid, get mode(){ return appMode; }, ED, BOT_THEMES};
 window.__pbReady = 1; { const w = document.getElementById('jsWarn'); if (w) w.style.display = 'none'; }
-})();
-</script>
-<script>
-// ---------- ads (website only) ----------
-// Paste the AdSense publisher ID (ca-pub-...) and the two ad unit IDs here once AdSense approves the site.
-// While 'client' is empty, no ad code loads. While a slot is empty, that ad space stays hidden.
-// Keep Auto ads OFF for this site in AdSense, so Google never puts ads on the drawing or voting screens.
-// Ads only ever show on the menu, the final results screens and the practice score, never while drawing or voting.
-window.PB_ADS = {client:'ca-pub-7172777388515296', menuSlot:'1624000368', resultsSlot:'9041511291'};
-(function(){
-  const A = window.PB_ADS; if (!A.client) return;
-  if (!document.querySelector('script[src*="adsbygoogle.js"]')){ const sc = document.createElement('script'); sc.async = true; sc.crossOrigin = 'anonymous';
-    sc.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + encodeURIComponent(A.client); document.head.appendChild(sc); }
-  // 'horizontal' keeps the ads above the results buttons short, so they never push the buttons off the screen
-  const fill = (id, slot, fmt) => { const box = document.getElementById(id); if (!box || !slot || box.dataset.filled) return; box.hidden = false; box.dataset.filled = '1';
-    const ins = document.createElement('ins'); ins.className = 'adsbygoogle'; ins.style.display = 'block'; ins.dataset.adClient = A.client; ins.dataset.adSlot = slot; ins.dataset.adFormat = fmt || 'auto'; ins.dataset.fullWidthResponsive = fmt ? 'false' : 'true'; box.appendChild(ins);
-    try { (window.adsbygoogle = window.adsbygoogle || []).push({}); } catch(e){} };
-  // an ad unit has to be on screen (with a width) when it's filled, so each fills the first time its screen shows
-  const when = (sel, fn) => { const el = document.getElementById(sel); if (!el) return; const go = () => { if (!el.hidden && el.offsetWidth > 0){ fn(); ob.disconnect(); } }; const ob = new MutationObserver(go); ob.observe(el, {attributes:true, attributeFilter:['hidden']}); let p = el.parentElement; while (p){ ob.observe(p, {attributes:true, attributeFilter:['hidden']}); p = p.parentElement; } setTimeout(go, 500); };
-  // some ad spaces only show at the right moment: with the final results buttons, or once the practice drawing is scored
-  const mirror = (src, id) => { const a = document.getElementById(src), b = document.getElementById(id); if (!a || !b) return; const go = () => { b.style.display = a.hidden ? 'none' : ''; }; new MutationObserver(go).observe(a, {attributes:true, attributeFilter:['hidden']}); go(); };
-  when('scrMenu', () => fill('adMenu', A.menuSlot));
-  when('vRes', () => fill('adRes', A.resultsSlot, 'horizontal'));
-  mirror('xrBtns', 'adX'); when('xrBtns', () => fill('adX', A.resultsSlot, 'horizontal'));
-  mirror('jXp', 'adJ'); when('jXp', () => fill('adJ', A.resultsSlot));
 })();
 </script>
 </body>
