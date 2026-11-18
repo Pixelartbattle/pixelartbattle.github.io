@@ -2885,7 +2885,7 @@ function dailyRate(){
 }
 function shareDaily(){
   const d = dailyDone(); if (!d || !d.s){ toast('Play today’s challenge first.'); return; }
-  const txt = `Pixel Battle Daily #${d.n || dayNum()} 🎨\n${d.th}: ${(+d.s).toFixed(1)}/10 (${d.acc | 0}% accurate)\n🔥 ${d.st | 0}-day streak\nCan you beat me? gwolf003.github.io/pixel-art`;
+  const txt = `Pixel Battle Daily #${d.n || dayNum()} 🎨\n${d.th}: ${(+d.s).toFixed(1)}/10 (${d.acc | 0}% accurate)\n🔥 ${d.st | 0}-day streak\nCan you beat me? pixelartbattle.github.io`;
   const copy = () => { try { navigator.clipboard.writeText(txt).then(() => toast('Score copied! Paste it to your friends.'), () => toast('Could not copy. Take a screenshot instead!')); } catch(e){ toast('Could not copy. Take a screenshot instead!'); } };
   try { if (navigator.share && matchMedia('(pointer:coarse)').matches){ navigator.share({text:txt}).catch(e => { if (!e || e.name !== 'AbortError') copy(); }); return; } } catch(e){}
   copy();
@@ -3468,7 +3468,7 @@ $('codeIn').addEventListener('input', () => { if (!NET.joining) joinMsg(''); });
 $('leaveRoom').onclick = () => { leaveRoom(); appMode = 'menu'; show('scrOnline'); };
 // invite links: the website, the file and the itch.io copy all invite friends to pixelbattlegame.com/#join=CODE,
 // which opens straight into the room. (Inside Claude there's no link, so friends get the code.)
-const INVITE_URL = 'https://gwolf003.github.io/pixel-art/';
+const INVITE_URL = 'https://pixelartbattle.github.io/';
 const inviteLink = () => INVITE_URL ? INVITE_URL + '#join=' + NET.code : '';
 if (INVITE_URL) $('copyCode').textContent = 'SHARE INVITE LINK';
 $('copyCode').onclick = () => {

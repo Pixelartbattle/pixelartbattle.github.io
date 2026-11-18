@@ -4,4 +4,4 @@ A second copy of [Pixel Battle](https://pixelbattlegame.com), for networks where
 It's the same game and uses the same online servers, so players here and on pixelbattlegame.com play together.
 Invite links from this copy point back to this address.
 
-Play: https://gwolf003.github.io/pixel-art/
+Play: https://pixelartbattle.github.io
