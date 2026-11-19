@@ -53,7 +53,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 button:focus-visible,input:focus-visible{outline:4px solid var(--y);outline-offset:2px}
 canvas.px{image-rendering:pixelated;display:block}
 
-.screen{position:fixed;inset:0;z-index:10;overflow-y:auto;overscroll-behavior:contain;
+.screen{position:fixed;inset:0 0 var(--adh,0px) 0;z-index:10;overflow-y:auto;overscroll-behavior:contain;
   padding-top:max(18px, env(safe-area-inset-top, 0px));padding-bottom:max(24px, env(safe-area-inset-bottom, 0px));
   padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
 .scrim{background:linear-gradient(90deg, rgba(26,28,44,.96) 0%, rgba(26,28,44,.9) 42%, rgba(26,28,44,.25) 68%, rgba(26,28,44,0) 100%)}
@@ -107,7 +107,7 @@ input[type=text]{width:100%;min-width:0;background:var(--e);border:4px solid var
 .xcard span{color:var(--s);font-size:16px}
 #vDraw:not(.cha) .chabox{display:none}
 #vDraw.cha{grid-template-rows:auto minmax(0,1fr) auto auto}
-#vDraw.cha .board{width:min(100%, calc(100dvh - 330px), 560px)}
+#vDraw.cha .board{width:min(100%, calc(100dvh - var(--adh,0px) - 330px), 560px)}
 #vDraw.watch .tools,#vDraw.watch .palette{visibility:hidden}
 #vDraw.watch .board canvas{cursor:default}
 #vDraw.cha:not(.watch) .chaform{display:none}
@@ -147,8 +147,8 @@ input[type=text]{width:100%;min-width:0;background:var(--e);border:4px solid var
 .mtile small{font:600 15px/1.15 var(--body);color:var(--s)}
 .mtile.wide{grid-column:1/-1}
 .mtile .new{position:absolute;top:-7px;right:-4px;font:400 8px var(--display);background:var(--q);color:var(--k);padding:3px 5px}
-.sheet{position:fixed;inset:0;z-index:60;background:rgba(10,12,22,.8);display:grid;place-items:center;padding:16px}
-.sheetbox{--mc:var(--a);background:var(--k);border:4px solid var(--mc);box-shadow:6px 6px 0 rgba(0,0,0,.6);padding:16px;display:grid;gap:12px;width:100%;max-width:470px;max-height:calc(100dvh - 32px);overflow-y:auto;overscroll-behavior:contain}
+.sheet{position:fixed;inset:0 0 var(--adh,0px) 0;z-index:60;background:rgba(10,12,22,.8);display:grid;place-items:center;padding:16px}
+.sheetbox{--mc:var(--a);background:var(--k);border:4px solid var(--mc);box-shadow:6px 6px 0 rgba(0,0,0,.6);padding:16px;display:grid;gap:12px;width:100%;max-width:470px;max-height:calc(100dvh - var(--adh,0px) - 32px);overflow-y:auto;overscroll-behavior:contain}
 .sheetbox.list{max-width:560px}
 .shead{display:grid;grid-template-columns:56px minmax(0,1fr) auto;gap:12px;align-items:center}
 .shead .mth{width:56px;height:56px}
@@ -249,7 +249,7 @@ h2{font-family:var(--display);font-weight:400;font-size:20px;margin:0;line-heigh
 .note{font-size:16px;color:var(--s);background:var(--e);padding:10px 12px}
 
 /* ---------- game views ---------- */
-.view{position:fixed;inset:0;z-index:8;display:grid;overflow-y:auto;
+.view{position:fixed;inset:0 0 var(--adh,0px) 0;z-index:8;display:grid;overflow-y:auto;
   padding-top:max(10px, env(safe-area-inset-top, 0px));padding-bottom:max(10px, env(safe-area-inset-bottom, 0px));
   padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
 .topbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:space-between}
@@ -268,7 +268,7 @@ h2{font-family:var(--display);font-weight:400;font-size:20px;margin:0;line-heigh
 
 #vDraw{grid-template-rows:auto minmax(0,1fr) auto;gap:10px}
 .dmain{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:14px;align-items:center;justify-items:center;min-height:0}
-.board{width:min(100%, calc(100dvh - 190px), 640px);aspect-ratio:1;position:relative;border:6px solid var(--w);box-shadow:8px 8px 0 rgba(0,0,0,.5);background:var(--w);touch-action:none}
+.board{width:min(100%, calc(100dvh - var(--adh,0px) - 190px), 640px);aspect-ratio:1;position:relative;border:6px solid var(--w);box-shadow:8px 8px 0 rgba(0,0,0,.5);background:var(--w);touch-action:none}
 .board canvas{width:100%;height:100%;cursor:crosshair;touch-action:none}
 .tools{display:grid;grid-template-columns:repeat(2,52px);gap:6px;align-content:center}
 .tool{width:52px;height:52px;border:0;background:var(--e);display:grid;place-items:center;font:400 7px var(--display);color:var(--s);padding:2px;box-shadow:inset -3px -3px 0 rgba(0,0,0,.3);gap:2px}
@@ -288,10 +288,10 @@ h2{font-family:var(--display);font-weight:400;font-size:20px;margin:0;line-heigh
   .dstatus::-webkit-scrollbar{display:none}
   .dstatus .who{font-size:13px;padding:2px 6px;white-space:nowrap;flex:none}
   .dmain{grid-template-columns:minmax(0,1fr);gap:10px}
-  .board{width:min(100%, 560px, calc(100dvh - 384px));order:1;min-width:240px}
+  .board{width:min(100%, 560px, calc(100dvh - var(--adh,0px) - 384px));order:1;min-width:240px}
   #vDraw.cha{grid-template-rows:auto max-content auto auto}
-  #vDraw.cha .board{width:min(100%, 560px, calc(100dvh - 400px))}
-  #vDraw.watch .board{width:min(100%, 560px, calc(100dvh - 330px))}
+  #vDraw.cha .board{width:min(100%, 560px, calc(100dvh - var(--adh,0px) - 400px))}
+  #vDraw.watch .board{width:min(100%, 560px, calc(100dvh - var(--adh,0px) - 330px))}
   #vDraw.watch .tools,#vDraw.watch .palette{display:none}
   .feed{height:78px}
   .palette{order:2;grid-template-columns:repeat(8,minmax(0,40px));gap:4px;width:100%;justify-content:center}
@@ -306,7 +306,7 @@ h2{font-family:var(--display);font-weight:400;font-size:20px;margin:0;line-heigh
 .vbar{height:8px;background:var(--e);width:100%}
 .vbar i{display:block;height:100%;background:var(--y);width:100%}
 .stage{display:grid;place-items:center;min-height:0;gap:8px}
-.frame{width:min(100%, calc(100dvh - 300px), 560px);aspect-ratio:1;border:14px solid transparent;background:linear-gradient(var(--w),var(--w)) padding-box,var(--birch) border-box;box-shadow:0 0 0 2px #8a6a3a, inset 0 0 0 1px rgba(255,255,255,.5), 10px 10px 0 2px rgba(0,0,0,.45);min-width:200px}
+.frame{width:min(100%, calc(100dvh - var(--adh,0px) - 300px), 560px);aspect-ratio:1;border:14px solid transparent;background:linear-gradient(var(--w),var(--w)) padding-box,var(--birch) border-box;box-shadow:0 0 0 2px #8a6a3a, inset 0 0 0 1px rgba(255,255,255,.5), 10px 10px 0 2px rgba(0,0,0,.45);min-width:200px}
 .frame canvas{box-shadow:0 0 0 2px #a98a52}
 .frame canvas{width:100%;height:100%}
 .by{font:400 11px var(--display);color:var(--s)}
@@ -363,7 +363,7 @@ h2{font-family:var(--display);font-weight:400;font-size:20px;margin:0;line-heigh
 #qTitle{text-align:center}
 #qSub{text-align:center}
 @media (prefers-reduced-motion: reduce){.loader i,.qbar i{animation:none}}
-#toast{position:fixed;left:50%;transform:translateX(-50%);bottom:max(18px, calc(env(safe-area-inset-bottom, 0px) + 12px));z-index:30;background:var(--w);color:var(--k);padding:10px 14px;font:600 17px var(--body);max-width:calc(100% - 32px);text-align:center;box-shadow:4px 4px 0 rgba(0,0,0,.5)}
+#toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(var(--adh,0px) + max(18px, calc(env(safe-area-inset-bottom, 0px) + 12px)));z-index:30;background:var(--w);color:var(--k);padding:10px 14px;font:600 17px var(--body);max-width:calc(100% - 32px);text-align:center;box-shadow:4px 4px 0 rgba(0,0,0,.5)}
 /* ---------- hall of artworks: a little museum ---------- */
 .m-gold{--bg:linear-gradient(135deg,#ffe08a,#e2a93b 55%,#f7d26a);--fg:#3a2306;background:linear-gradient(135deg,#ffe08a,#e2a93b 55%,#f7d26a)!important}
 .hall{background:
@@ -631,7 +631,7 @@ body{margin:0}
 <section class="view" id="vJudge" hidden>
   <div class="resbox" style="max-width:560px;justify-self:center;align-content:start">
     <header class="topbar"><div><div class="lbl" id="jLbl">Practice</div><h2 id="jTitle">THEME: PIZZA</h2></div></header>
-    <div class="frame" style="justify-self:center;width:min(100%, 420px, calc(100dvh - 380px));min-width:220px"><canvas id="jc" class="px" width="512" height="512" aria-label="Your drawing"></canvas></div>
+    <div class="frame" style="justify-self:center;width:min(100%, 420px, calc(100dvh - var(--adh,0px) - 380px));min-width:220px"><canvas id="jc" class="px" width="512" height="512" aria-label="Your drawing"></canvas></div>
     <div class="critic" id="jBox"><b id="jHead">TIME'S UP!</b><span id="jScore" style="font:400 28px var(--display);color:var(--y)"></span><span id="jText" style="white-space:pre-line">Ready for the AI judge?</span></div>
     <div class="opt" id="jXp" hidden><div class="lvl">LV <span id="jLvl">1</span><div class="xpbar"><i id="jXpBar"></i></div><span id="jGain" style="color:var(--l)"></span></div><div id="jUnlock"></div></div>
     <div class="row end">
